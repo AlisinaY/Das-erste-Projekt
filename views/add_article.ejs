@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+  <div class="container" id="box">
+    <h2><%= title %></h2>
+
+    <form class="form-group" action="/articles/add" method="POST">
+      <label for="title">Title</label>
+      <input class="form-control" id="title" type="text" name="title" placeholder="Title">
+      <label for="author">Author</label>
+      <input class="form-control" id="author" type="text" name="author" placeholder="Author">
+      <label for="body">Body</label>
+      <textarea class="form-control" id="body" name="body" placeholder="Body"></textarea>
+      <br>
+      <button class="btn btn-primary" type="submit" name="button">Submit</button>
+    </form>
+    
+<%- include("partials/footer") %>

@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+  <div class="container" id="box">
+    <h2>Register</h2>
+
+    <form class="form-group" action="/users/register" method="POST">
+      <label for="name">Name</label>
+      <input class="form-control" id="name" type="text" name="name" placeholder="Name">
+      <label for="email">Email Address</label>
+      <input class="form-control" id="email" type="email" name="email" placeholder="Email">
+      <label for="username">Username</label>
+      <input class="form-control" id="username" type="text" name="username" placeholder="Username">
+      <label for="password">Password</label>
+      <input class="form-control" id="password" type="password" name="password" placeholder="Password">
+      <label for="password1">Confrim Password</label>
+      <input class="form-control" id="password1" type="password" name="password1" placeholder="Confrim password">
+      <br>
+      <button class="btn btn-primary" type="submit" name="button">Submit</button>
+    </form>
+
+  </div>
+    
+
+<%- include("partials/footer") %>

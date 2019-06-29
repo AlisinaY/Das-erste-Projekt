@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+
+    <div class="container" id="box1">
+        <h1><%= title %></h1>
+        <ul class="list-group">
+         <% articles.forEach(function(article){ %>
+            <li class="list-group-item"><a href="/articles/<%= article._id %>"><%= article.title %></a></li>
+        </ul>
+        <% }); %>
+    </div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+  <div class="container" id="box">
+    <h2><%= title %></h2>
+
+    <form class="form-group" action="/articles/edit/<%= article._id %>" method="POST">
+      <input class="form-control" type="text" name="title" value="<%= article.title %>">
+      <input class="form-control" type="text" name="author" value="<%= article.author %>">
+      <textarea class="form-control" name="body" value=""><%= article.body %></textarea>
+      <br>
+      <button class="btn btn-primary" type="submit" name="button">Submit</button>
+    </form>
+
+  </div>
+    
+
+<%- include("partials/footer") %>

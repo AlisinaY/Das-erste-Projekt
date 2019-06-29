@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Website</title>
+
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/articles/add">Add Article</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <% if(user) { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/users/logout">Logout</a>
+              </li>
+         <% } else { %>
+          <li class="nav-item">
+              <a class="nav-link" href="/users/register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/login">Login</a>
+            </li>
+        <% } %>
+         </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+      <%- messages('message', locals) %>
+  
